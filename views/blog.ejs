@@ -1,0 +1,47 @@
+
+<%- include("../partials/head.ejs") %>
+
+<div id="Blog-section">
+    <div id="blog">
+        <div class="blogger" action="/read">
+            <span><h2>The first blog</h2></span>
+            <img src="./IMAGES/ayanokoji.jpg" alt="Blog Image"/>
+            <details>
+                <summary>
+                    <p>Blog text</p>
+                </summary>
+                <p>This document is intended for developers who want to write applications that can interact with the Blogger API. Blogger is a tool for creating websites that allow people to publish their thoughts on an ongoing basis.</p>
+                <button class="like">*</button>
+                <a href="/read"><button class="Edit">Edit</button></a>
+            </details>    
+        </div>
+    </div>
+    <div id="Add-blog">
+        <form action="/add" method="POST" enctype="multipart/form-data">
+            <label for="Author">Author</label>
+            <br>
+            <input id="Author" name="author" required/>
+            <br>
+            <label for="Idea">Idea</label>
+            <br>
+            <input id="Idea" name="idea" required/>
+            <br>
+            <br>
+            <label for="fileUpload">Choose a file:</label>
+            <br>
+            <input type="file" id="fileUpload" name="fileUpload">
+            <br>
+            <label for="Link">Image link</label>
+            <br>
+            <input id="Link" name="link"/>
+            <br>
+            <label for="Description">Description</label>
+            <br>
+            <textarea id="Description" name="description" required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<%- include("../partials/foot.ejs") %>
